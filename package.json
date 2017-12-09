@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap_vue",
-  "description": "A Vue.js project",
+  "name": "bootstrap_vue_presentation_example",
+  "description": "A Vue.js project. For Educational Purposes only.",
   "version": "1.0.0",
   "author": "Dominique Heinelt <s72888@htw-dresden.de>",
   "private": true,
@@ -9,9 +9,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.0.1",
-    "@fortawesome/fontawesome-free-solid": "^5.0.1",
-    "@fortawesome/vue-fontawesome": "0.0.21",
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^1.2.0",
     "popper.js": "^1.12.9",
