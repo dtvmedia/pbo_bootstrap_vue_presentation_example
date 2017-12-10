@@ -1,56 +1,17 @@
 <template>
     <div>
         <!-- Navbar -->
-        <b-navbar type="dark" class="bg-bootstrap">
-            <b-container>
-                <b-navbar-brand><i class="fab fa-vuejs"></i> Bootstrap Vue Demo</b-navbar-brand>
-            </b-container>
-        </b-navbar>
+
 
         <!-- Jumbotron + Create Button -->
-        <b-jumbotron fluid>
-            <template slot="header">
-                <span>User Management</span>
-                <div class="float-right">
-                    <b-button size="lg" type="button" variant="success" v-b-modal.form_modal><i class="fas fa-plus"></i> New User</b-button>
-                </div>
-            </template>
-        </b-jumbotron>
+
 
         <!-- Table -->
-        <b-container>
-            <b-table bordered striped v-bind:items="items" v-bind:fields="fields">
-                <template slot="active" slot-scope="row">
-                    <b-badge v-if="row.item.isActive === true" variant="success">Active</b-badge>
-                    <b-badge v-if="row.item.isActive === false" variant="secondary">Inactive</b-badge>
-                </template>
-                <template slot="actions" slot-scope="row">
-                    <b-button size="sm" variant="danger" v-on:click="deleteRow(row.item.id)"><i class="fas fa-times"></i> Delete</b-button>
-                </template>
-            </b-table>
-        </b-container>
+
 
         <!-- Modal Form -->
-        <b-modal id="form_modal" title="Create new User" header-bg-variant="dark" header-text-variant="light" ok-variant="success" v-on:ok="submitForm">
-            <template slot="modal-ok"> <!-- Oder ok-title="Create User" -->
-                <i class="fas fa-plus"></i> Create User
-            </template>
 
-            <b-form>
-                <b-form-group label="Your Firstname:">
-                    <b-form-input type="text" v-model="form.firstname" placeholder="Firstname"></b-form-input>
-                </b-form-group>
-                <b-form-group label="Your Lastname:">
-                    <b-form-input type="text" v-model="form.lastname" placeholder="Lastname"></b-form-input>
-                </b-form-group>
-                <b-form-group label="Your Age:">
-                    <b-form-input type="number" v-model="form.age" placeholder="Age"></b-form-input>
-                </b-form-group>
-                <b-form-group>
-                    <b-form-checkbox v-model="form.active">Active</b-form-checkbox>
-                </b-form-group>
-            </b-form>
-        </b-modal>
+
     </div>
 </template>
 
@@ -62,11 +23,7 @@
                  * Table Column Definitions
                  */
                 fields: [
-                    { key: 'active', label: 'Active' },
-                    { key: 'first_name', sortable: true },
-                    { key: 'last_name', sortable: true },
-                    { key: 'age', sortable: true },
-                    { key: 'actions', label: 'Actions' }
+
                 ],
                 /**
                  * Table Raw Data
