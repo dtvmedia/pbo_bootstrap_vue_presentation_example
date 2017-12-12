@@ -3,7 +3,7 @@
         <!-- Navbar -->
 
 
-        <!-- Jumbotron + Create Button -->
+        <!-- Create Button -->
 
 
         <!-- Table -->
