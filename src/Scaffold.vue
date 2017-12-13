@@ -108,7 +108,8 @@
 </script>
 
 <style>
-    .bg-bootstrap {
+    .nav-bootstrap {
         background-color: rgb(86, 61, 124);
+        color:white;
     }
 </style>
