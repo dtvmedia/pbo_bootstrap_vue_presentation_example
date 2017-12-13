@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Navbar -->
-        <b-navbar class="nav-bootstrap">
+        <b-navbar class="bg-bootstrap" type="dark">
             <b-container>
                 <b-navbar-brand><i class="fab fa-vuejs"></i> Bootstrap Vue Demo</b-navbar-brand>
             </b-container>
@@ -151,8 +151,7 @@
 </script>
 
 <style>
-    .nav-bootstrap {
+    .bg-bootstrap {
         background-color: rgb(86, 61, 124);
-        color:white;
     }
 </style>

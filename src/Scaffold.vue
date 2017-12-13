@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <!-- Navbar -->
-
+    <!-- Container -->
 
         <!-- Create Button -->
 
@@ -12,7 +10,6 @@
         <!-- Modal Form -->
 
 
-    </div>
 </template>
 
 <script>
@@ -60,56 +57,30 @@
             },
 
             /**
-             * Add Table Row Function
-             * @param row
-             */
-            addRow: function ( row ) {
-                this.items.push( row );
-            },
-
-            /**
-             * Returns the next auto increment id
-             * @return int
-             */
-            getNextAutoId: function () {
-                if ( this.items.length === 0 ) {
-                    return 0;
-                }
-
-                return this.items[ this.items.length - 1 ].id + 1;
-            },
-
-            /**
-             * Clear Form Function
-             */
-            clearForm: function () {
-                this.form.firstname = '';
-                this.form.lastname = '';
-                this.form.age = 0;
-                this.form.active = false;
-            },
-
-            /**
              * Form Submit Event Handler
              */
             submitForm: function () {
-                this.addRow( {
-                    id: this.getNextAutoId(),
+                // Get Next Auto ID
+                let nextAutoId = 0;
+                if ( this.items.length !== 0 ) {
+                    nextAutoId = this.items[ this.items.length - 1 ].id + 1
+                }
+
+                // Add Row
+                this.items.push( {
+                    id: nextAutoId,
                     isActive: this.form.active,
                     age: this.form.age,
                     first_name: this.form.firstname,
                     last_name: this.form.lastname
                 } );
 
-                this.clearForm();
+                // Clear Form
+                this.form.firstname = '';
+                this.form.lastname = '';
+                this.form.age = 0;
+                this.form.active = false;
             }
         }
     }
 </script>
-
-<style>
-    .nav-bootstrap {
-        background-color: rgb(86, 61, 124);
-        color:white;
-    }
-</style>
